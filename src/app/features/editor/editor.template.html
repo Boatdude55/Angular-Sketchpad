@@ -1,0 +1,8 @@
+<div class="full-height-child drag-boundary grabbable rounded-border card-panel z-depth-3" [ngClass]="{ 'top-b': !edge?.top, 'bottom-b': !edge?.bottom, 'left-b': !edge?.left, 'right-b': !edge?.right }" droppable (onDrop)="onItemDrop($event)" #myBounds>
+    <div class="drag-block" *ngFor="let visual of visualCode" [ngStyle]="visual" ngDraggable (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="inBounds">
+        <!--<div class="white rounded-border center-align" contenteditable="true"></div>-->
+        <div class="input-field">
+          <input placeholder="var = 6" type="text" class="variable white-text">
+        </div>
+    </div>
+</div>

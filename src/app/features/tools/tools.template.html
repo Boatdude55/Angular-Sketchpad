@@ -1,0 +1,8 @@
+<ul class="full-height-child list rounded-border card-panel z-depth-3 grey lighten-5 no-overflow">
+    <li *ngFor="let tool of toolsDraggable" class="waves-effect waves-light item valign-wrapper grabbable {{tool.style['background-color']}}" draggable [dragData]="tool.style">
+        <i class="material-icons small white-text centered-icon">{{tool.icon}}</i>
+    </li>
+    <li *ngFor="let tool of tools" class="waves-effect waves-light item valign-wrapper {{tool.style['background-color']}}">
+        <i class="material-icons small white-text centered-icon">{{tool.icon}}</i>
+    </li>
+</ul>
